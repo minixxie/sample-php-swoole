@@ -1,0 +1,13 @@
+version: '2'
+services:
+  sample-php-swoole:
+    image: xlight/docker-php7-swoole:latest
+    container_name: sample-php-swoole
+    hostname: sample-php-swoole
+    volumes:
+      - ".:/workdir"
+    expose:
+      - "80"
+    ports:
+      - "8888:80"
+    command: /workdir/docker-entry.sh
